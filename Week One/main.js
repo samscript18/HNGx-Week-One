@@ -15,7 +15,7 @@ function getTime() {
   const date = new Date().getDay();
   const weekday = weekdays[date];
 
-  const time = new Date().toLocaleTimeString("en-US", { hour12: true });
+  const time = new Date().getUTCMilliseconds();
 
   day.innerHTML = `${weekday}`;
   Time.innerHTML = `${time}`;
